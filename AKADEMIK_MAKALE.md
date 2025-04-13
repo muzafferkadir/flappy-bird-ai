@@ -82,23 +82,23 @@ Her parametre kombinasyonu için 10 bağımsız çalıştırma gerçekleştirilm
 
 #### 4.1.1. Popülasyon Boyutu
 
-Popülasyon boyutunun eğitim performansına etkisi Şekil 1'de gösterilmektedir. Daha büyük popülasyonlar (N = 200), daha küçük popülasyonlara (N = 50, 100) göre daha iyi performans göstermiştir. Bu, daha büyük popülasyonların daha fazla çeşitlilik sağlayarak, çözüm uzayını daha etkili bir şekilde araştırabilmesinden kaynaklanmaktadır.
+Daha büyük popülasyonlar (N = 200), daha küçük popülasyonlara (N = 50, 100) göre daha iyi performans göstermiştir. Bu, daha büyük popülasyonların daha fazla çeşitlilik sağlayarak, çözüm uzayını daha etkili bir şekilde araştırabilmesinden kaynaklanmaktadır.
 
 #### 4.1.2. Mutasyon Parametreleri
 
-Mutasyon oranı ve mutasyon miktarının etkisi Şekil 2'de gösterilmektedir. Orta düzeyde bir mutasyon oranı (0.2) ve mutasyon miktarı (0.3), en iyi performansı sağlamıştır. Çok düşük mutasyon değerleri, yetersiz keşfe yol açarken, çok yüksek değerler öğrenilen bilgilerin kaybedilmesine neden olabilir.
+Orta düzeyde bir mutasyon oranı (0.2) ve mutasyon miktarı (0.3), en iyi performansı sağlamıştır. Çok düşük mutasyon değerleri, yetersiz keşfe yol açarken, çok yüksek değerler öğrenilen bilgilerin kaybedilmesine neden olabilir.
 
 #### 4.1.3. Hayatta Kalma Oranı
 
-Hayatta kalma oranının etkisi Şekil 3'te gösterilmektedir. Orta düzeyde bir hayatta kalma oranı (0.3), en iyi performansı sağlamıştır. Çok düşük hayatta kalma oranı, çeşitliliği azaltırken, çok yüksek hayatta kalma oranı, seçilim baskısını azaltarak ilerlemeyi yavaşlatabilir.
+Orta düzeyde bir hayatta kalma oranı (0.3), en iyi performansı sağlamıştır. Çok düşük hayatta kalma oranı, çeşitliliği azaltırken, çok yüksek hayatta kalma oranı, seçilim baskısını azaltarak ilerlemeyi yavaşlatabilir.
 
 ### 4.2. Öğrenme Eğrileri
 
-Şekil 4, optimum parametreler kullanılarak elde edilen öğrenme eğrilerini göstermektedir. Evrimsel algoritma, ilk 20-30 nesil boyunca hızlı bir ilerleme göstermiş, ardından daha yavaş bir ilerleme sergilemiştir. 100 nesil sonunda, en iyi ajan ortalama 50 boruyu başarıyla geçebilmiştir, bu da insan seviyesinde bir performansa karşılık gelmektedir.
+ Evrimsel algoritma, ilk 20-30 nesil boyunca hızlı bir ilerleme göstermiş, ardından daha yavaş bir ilerleme sergilemiştir. 100 nesil sonunda, en iyi ajan ortalama 50 boruyu başarıyla geçebilmiştir, bu da insan seviyesinde bir performansa karşılık gelmektedir.
 
 ### 4.3. Evrimsel Yaklaşım vs. Pekiştirmeli Öğrenme
 
-Evrimsel yaklaşımın, DQN gibi pekiştirmeli öğrenme yöntemlerine göre avantajları ve dezavantajları Tablo 1'de özetlenmektedir. Evrimsel yaklaşım, özellikle seyrek ödül ortamlarında ve paralel hesaplama imkanı olduğunda avantajlı olabilir. Ancak, çevrimiçi öğrenme gerektiren durumlarda ve sürekli ödül sinyallerinin mevcut olduğu ortamlarda, pekiştirmeli öğrenme yöntemleri daha etkili olabilir.
+Evrimsel yaklaşım, özellikle seyrek ödül ortamlarında ve paralel hesaplama imkanı olduğunda avantajlı olabilir. Ancak, çevrimiçi öğrenme gerektiren durumlarda ve sürekli ödül sinyallerinin mevcut olduğu ortamlarda, pekiştirmeli öğrenme yöntemleri daha etkili olabilir.
 
 ## 5. Sonuç ve Gelecek Çalışmalar
 
