@@ -94,7 +94,7 @@ Orta düzeyde bir hayatta kalma oranı (0.3), en iyi performansı sağlamıştı
 
 ### 4.2. Öğrenme Eğrileri
 
- Evrimsel algoritma, ilk 20-30 nesil boyunca hızlı bir ilerleme göstermiş, ardından daha yavaş bir ilerleme sergilemiştir. 100 nesil sonunda, en iyi ajan ortalama 50 boruyu başarıyla geçebilmiştir, bu da insan seviyesinde bir performansa karşılık gelmektedir.
+ Evrimsel algoritma, ilk 20-30 nesil boyunca hızlı bir ilerleme göstermiş, ardından daha yavaş bir ilerleme sergilemiştir. 100 nesil sonunda, en iyi ajan ortalama 50+ boruyu başarıyla geçebilmiştir, bu da insan seviyesinde bir performansa karşılık gelmektedir.
 
 ### 4.3. Evrimsel Yaklaşım vs. Pekiştirmeli Öğrenme
 

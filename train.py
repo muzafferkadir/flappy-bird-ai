@@ -13,7 +13,7 @@ def create_bird_with_brain(x, y, brain):
     bird = Bird(x, y, brain=brain)
     return bird
 
-def display_best_model(model, max_steps=2000):
+def display_best_model(model, max_steps=None):
     """En iyi modeli görsel olarak gösterir"""
     # Pygame'i başlat
     import pygame
@@ -29,7 +29,7 @@ def display_best_model(model, max_steps=2000):
     running = True
     step = 0
     
-    while running and step < max_steps:
+    while running:
         # Pygame olaylarını işle
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -39,11 +39,15 @@ def display_best_model(model, max_steps=2000):
         _, _, done = game.step()
         game.render()
         
-        # Tüm kuşlar öldüyse veya maksimum adım sayısına ulaşıldıysa döngüyü sonlandır
+        # Tüm kuşlar öldüyse döngüyü sonlandır
         if done:
             break
             
         step += 1
+        
+        # İsteğe bağlı maksimum adım kontrolü
+        if max_steps is not None and step >= max_steps:
+            break
     
     # Oyunu kapat
     game.close()
