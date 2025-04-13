@@ -288,11 +288,16 @@ class FlappyBird:
                             pipe.width, self.height - (pipe.gap_y + pipe.gap_height // 2)))
         
         # Draw birds
-        for bird in self.birds:
+        for i, bird in enumerate(self.birds):
             if bird.alive:
                 # Draw bird as a yellow rectangle
                 pygame.draw.rect(self.screen, bird.color, 
                                (bird.x, bird.y, bird.width, bird.height))
+                
+                # Draw bird number in the center of the bird rectangle
+                number_text = self.font.render(str(i+1), True, (0, 0, 0))
+                text_rect = number_text.get_rect(center=(bird.x + bird.width//2, bird.y + bird.height//2))
+                self.screen.blit(number_text, text_rect)
         
         # Draw ground
         pygame.draw.rect(self.screen, (139, 69, 19), 
