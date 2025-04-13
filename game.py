@@ -280,13 +280,18 @@ class FlappyBird:
         # Draw pipes
         for pipe in self.pipes:
             # Upper pipe
-            pygame.draw.rect(self.screen, (0, 255, 0), 
-                           (pipe.x, 0, pipe.width, pipe.gap_y - pipe.gap_height // 2))
+            upper_pipe = self.pipe_img.copy()
+            upper_pipe_height = pipe.gap_y - pipe.gap_height // 2
+            upper_pipe = pygame.transform.scale(upper_pipe, (pipe.width, upper_pipe_height))
+            self.screen.blit(upper_pipe, (pipe.x, 0))
+            
             # Lower pipe
-            pygame.draw.rect(self.screen, (0, 255, 0),
-                           (pipe.x, pipe.gap_y + pipe.gap_height // 2, 
-                            pipe.width, self.height - (pipe.gap_y + pipe.gap_height // 2)))
-        
+            lower_pipe = self.pipe_img.copy()
+            lower_pipe_y = pipe.gap_y + pipe.gap_height // 2
+            lower_pipe_height = self.ground_y - lower_pipe_y
+            lower_pipe = pygame.transform.scale(lower_pipe, (pipe.width, lower_pipe_height))
+            self.screen.blit(lower_pipe, (pipe.x, lower_pipe_y))
+            
         # Draw birds
         for i, bird in enumerate(self.birds):
             if bird.alive:
@@ -306,6 +311,27 @@ class FlappyBird:
         # Draw score
         score_text = self.font.render(f'Score: {self.score}', True, (0, 0, 0))
         self.screen.blit(score_text, (10, 10))
+
+        # Draw alive birds count
+        birds_text = self.font.render(f"Birds: {self.living_birds}", True, (255, 255, 255))
+        self.screen.blit(birds_text, (10, 50))
+        
+        # Eğitim modu için ek bilgiler
+        if self.mode == GameMode.AI:
+            # Çerçeve sayısı
+            frame_text = self.font.render(f"Frame: {self.frame_count}", True, (255, 255, 255))
+            self.screen.blit(frame_text, (10, 90))
+            
+            # En yakın borunun konumu
+            next_pipe = None
+            for pipe in self.pipes:
+                if pipe.x + pipe.width > 100:  # Kuşun x konumu
+                    next_pipe = pipe
+                    break
+            
+            if next_pipe:
+                pipe_text = self.font.render(f"Next Pipe: {int(next_pipe.x)}, Gap: {int(next_pipe.gap_y)}", True, (255, 255, 255))
+                self.screen.blit(pipe_text, (10, 130))
         
         if self.game_over:
             game_over_text = self.font.render('Game Over! Press R to restart', True, (255, 0, 0))
